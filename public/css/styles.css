@@ -1,16 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Literata:opsz@7..72&display=swap");
+
 /******* Change Box Model ***************/
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-h1{
+:root {
+  --background: #fff;
+  --accent: #01b0d3;
+  --body-font: Inter;
+  --text: #161515; 
+  --main-font: Roboto, sans-serif;
+}
+
+#wrapper {
+  width: 95%;
+  background-color: var(--background);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
+}
+
+
+h1, h2{
+  font-family: var(--main-font);
+}
+
+h2{
+  padding: 1rem 0;
+}
+
+header{
+  background-color: white;
+  padding: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header a{
+  text-decoration: none;
+  color: var(--text)
+}
+
+header h1{
   font-weight: bold;
+  color: #161515;
+  text-decoration: none;
 }
 
+body{
+  font-family: 'Poppins', sans-serif;
+}
 
+#welcome{
+  padding-left: 1rem;
+}
 
-@media (max-width: 680px){
+/* Navigation bar */
+nav{
+  background-color: var(--text);
+  color: #fff;
+  padding: 1rem;
+}
 
+nav a{
+  text-decoration: none;
+  color: white;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+/*hero section*/
+#hero{
+  background: url('../images/vehicles/delorean.jpg') no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+#hero-card{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  color: var(--accent);
+  max-width: 200px;
+}
+
+#hero-card h2{
+  font-weight: bolder;
+}
+
+#hero-card button{
+  background-color: var(--accent);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+#hero-card button a{
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+#hero-card li{
+  list-style: none;
+}
+
+#upgrades ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+#upgrades li{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  text-align: center;
+}
+
+#upgrades li picture{
+  background: var(--accent);
+  border: 1px solid var(--text);
+  align-self: center;
+  max-height: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#reviews ul{
+  margin-left: 1rem;
+}
+
+#reviews li{
+  margin-bottom: 1rem;
+}
+
+footer{
+  padding: 1rem;
+}
+
+/* media queries */
+@media (min-width: 680px){
+  body {
+    background-image: linear-gradient(45deg, #000 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #000 75%),
+    linear-gradient(45deg, transparent 75%, #000 75%),
+    linear-gradient(45deg, #000 25%, #fff 25%);
+    background-size: 100px 100px;
+    background-position: 0 0, 0 0, -50px -50px, 50px 50px;
+  }
+
+    #wrapper {
+    border: 5px solid var(--accent);
+    border-radius: 10px;
+    margin-top: 1rem;
+    width: 75vw;
+    max-width: 1200px;
+  }
+  
+  .main-flex{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .main-flex div{
+    width: 48%;
+    padding: 1rem;
+  }
 }
