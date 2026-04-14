@@ -58,6 +58,37 @@ Util.buildClassificationGrid = async function(data){
 }
 
 /* ****************************************
+    * Build detail view HTML
+ **************************************** */
+Util.buildDetailView = async function(data){
+  let detail = ''
+  if (data && data.length > 0) {
+    const vehicle = data[0]
+        detail +='<section id="detail-display">'
+        detail +='<picture>'
+        detail += '<img src="' + vehicle.inv_image + '" alt="Image of ' 
+    + vehicle.inv_make + ' ' + vehicle.inv_model + ' on CSE Motors" />'
+        detail +='</picture>'
+        detail += '<div>'
+        detail +=  '<span><h2>Name: ' + vehicle.inv_make + ' ' + vehicle.inv_model + '</h2></span>'
+        detail +=  '<span id="price-and-mileage"><h2>Mileage: ' + vehicle.inv_miles.toLocaleString() + '</h2> <h2>Price: $' 
+    + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</h2></span>'
+        detail +=  '<span>'
+        detail +=    '<ul>'
+        detail +=      '<li>Color: ' + vehicle.inv_color + '</li>'
+        detail +=      '<li>Year: ' + vehicle.inv_year + '</li>'
+        detail +=      '<li>Description: <p>' + vehicle.inv_description + '</p></li>'
+        detail +=    '</ul>'
+        detail +=  '</span>'
+        detail +='</div>'
+        detail +='</section>'  
+  } else {
+    detail = '<p class="notice">Sorry, no matching vehicle could be found.</p>'
+  }
+  return detail
+}
+
+/* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 
  * General Error Handling

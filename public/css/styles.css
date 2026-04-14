@@ -170,8 +170,185 @@ footer{
   padding: 1rem;
 }
 
+/* Inventory page styles */
+
+main h1 {
+  padding: 1rem;
+}
+
+#inv-display {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 1rem;
+}
+
+#inv-display li {
+  background: #ffffff;
+  border: 1px solid rgba(22, 21, 21, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 32px rgba(22, 21, 21, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#inv-display li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 42px rgba(22, 21, 21, 0.14);
+}
+
+#inv-display li img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.namePrice {
+  padding: 1rem 1.1rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.namePrice h2 {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin: 0;
+  flex: 1 1 60%;
+}
+
+.namePrice h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.namePrice h2 a:hover {
+  color: var(--accent);
+}
+
+.namePrice span {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#inv-display li hr {
+  border: none;
+  border-top: 1px solid rgba(22, 21, 21, 0.12);
+  margin: 0 0 1rem;
+}
+
+.notice {
+  background: #f8f4ea;
+  border: 1px solid #f0d9b1;
+  color: #6d4b24;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  margin: 2rem 0;
+}
+
+#detail-display {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(22, 21, 21, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 24px 44px rgba(22, 21, 21, 0.10);
+  max-width: 1100px;
+  margin: 1.5rem auto;
+}
+
+#detail-display picture {
+  display: block;
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 360px;
+}
+
+#detail-display picture img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+#detail-display > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+#detail-display .info h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+#price-and-mileage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+#price-and-mileage h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#detail-display ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+#detail-display li {
+  background: rgba(1, 176, 211, 0.05);
+  border-radius: 14px;
+  padding: 1rem;
+  color: #333;
+}
+
+#detail-display li p {
+  margin: 0.5rem 0 0;
+  line-height: 1.65;
+}
+
+#detail-display li strong {
+  color: var(--accent);
+}
+
+#detail-display .info hr {
+  border: none;
+  border-top: 1px solid rgba(22, 21, 21, 0.12);
+  margin: 0;
+}
+
+#detail-display .info p {
+  margin: 0;
+  color: #3a3a3a;
+  line-height: 1.7;
+}
+
+#detail-display .info p strong {
+  color: var(--accent);
+}
+
 /* media queries */
-@media (min-width: 680px){
+@media (min-width: 800px){
   body {
     background-image: linear-gradient(45deg, #000 25%, transparent 25%),
     linear-gradient(45deg, transparent 75%, #000 75%),
@@ -198,5 +375,30 @@ footer{
   .main-flex div{
     width: 48%;
     padding: 1rem;
+  }
+
+  #inv-display {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px){
+  #detail-display {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  #detail-display picture {
+    flex: 0 0 45%;
+    min-height: 420px;
+  }
+
+  #detail-display > div {
+    flex: 1;
+  }
+
+  #detail-display .info {
+    justify-content: flex-start;
   }
 }
