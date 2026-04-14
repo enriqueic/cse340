@@ -122,6 +122,14 @@ nav ul{
   font-weight: bolder;
 }
 
+#hero a:hover {
+  opacity: 0.5;
+}
+
+#actionbtn:hover {
+  opacity: 0.5;
+}
+
 #hero-card li{
   list-style: none;
 }
