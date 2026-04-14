@@ -34,6 +34,10 @@ h2{
   padding: 1rem 0;
 }
 
+main > p{
+  margin-left: 1rem;
+}
+
 header{
   background-color: white;
   padding: 1.5rem;
