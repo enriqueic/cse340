@@ -462,6 +462,10 @@ main h1 {
   text-decoration: underline;
 }
 
+input[type="password"] {
+  margin-top: 1rem;
+}
+
 .password-field {
   display: flex;
   gap: 0.75rem;

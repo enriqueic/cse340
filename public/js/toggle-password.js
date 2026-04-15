@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const togglePassword = document.getElementById("togglePassword")
-  const passwordInput = document.getElementById("accountPassword")
+  const passwordInput = document.getElementById("account_password")
 
   if (togglePassword && passwordInput) {
     togglePassword.addEventListener("click", () => {
