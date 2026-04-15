@@ -248,7 +248,7 @@ main h1 {
 }
 
 .namePrice span {
-  color: var(--accent);
+  color: darkgreen;
   font-size: 1rem;
   font-weight: 700;
   white-space: nowrap;

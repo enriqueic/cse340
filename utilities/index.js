@@ -37,7 +37,7 @@ Util.buildClassificationGrid = async function(data){
       + '" title="View ' + vehicle.inv_make + ' '+ vehicle.inv_model 
       + ' details"><img src="' + vehicle.inv_thumbnail 
       +'" alt="Image of '+ vehicle.inv_make + ' ' + vehicle.inv_model 
-      +' on CSE Motors" /></a>'
+      +': ' + vehicle.description + '" /></a>'
       grid += '<div class="namePrice">'
       grid += '<hr />'
       grid += '<h2>'
@@ -67,7 +67,7 @@ Util.buildDetailView = async function(data){
         detail +='<section id="detail-display">'
         detail +='<picture>'
         detail += '<img src="' + vehicle.inv_image + '" alt="Image of ' 
-    + vehicle.inv_make + ' ' + vehicle.inv_model + ' on CSE Motors" />'
+    + vehicle.inv_make + ' ' + vehicle.inv_model + ': ' + vehicle.inv_description + '" />'
         detail +='</picture>'
         detail += '<div>'
         detail +=  '<span><h2>Name: ' + vehicle.inv_make + ' ' + vehicle.inv_model + '</h2></span>'
