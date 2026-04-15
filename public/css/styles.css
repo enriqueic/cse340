@@ -67,6 +67,10 @@ body{
   padding-left: 1rem;
 }
 
+.notice li{
+  margin-left: 0.5rem;
+}
+
 /* Navigation bar */
 nav{
   background-color: var(--text);
