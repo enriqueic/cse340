@@ -134,6 +134,23 @@ nav ul{
   font-weight: bolder;
 }
 
+.button-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent);
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.button-link:hover {
+  opacity: 0.95;
+}
+
 #hero a:hover {
   color:white;
   opacity: 0.9;
@@ -490,17 +507,6 @@ input[type="password"] {
   cursor: pointer;
   white-space: nowrap;
 }
-
-input:required:invalid, input:focus:invalid {
- background-image: url(/images/invalid.png);
- background-position: right top;
- background-repeat: no-repeat;
-}
- input:required:valid {
- background-image: url(/images/valid.png);
- background-position: right top;
- background-repeat: no-repeat;
- }
 
 /* media queries */
 @media (min-width: 800px){
