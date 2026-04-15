@@ -127,11 +127,8 @@ nav ul{
 }
 
 #hero a:hover {
-  opacity: 0.5;
-}
-
-#actionbtn:hover {
-  opacity: 0.5;
+  color:white;
+  opacity: 0.9;
 }
 
 #hero-card li{
@@ -173,11 +170,13 @@ nav ul{
 footer{
   padding: 1rem;
   padding-bottom: 0;
+  padding-left: 0;
 }
 
 footer > p{
   padding: 0.5rem;
   padding-bottom: 0;
+  padding-left: 0;
 }
 
 /* Inventory page styles */
@@ -215,7 +214,7 @@ main h1 {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 120px;
+  max-height: 300px;
   object-fit: cover;
 }
 
@@ -393,6 +392,10 @@ main h1 {
 
   #inv-display {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #inv-display li img {
+    max-height: 120px;
   }
 }
 
