@@ -5,6 +5,11 @@ const accountController = require("../controllers/accountController")
 
 router.get("/login", Util.handleErrors(accountController.buildLogin))
 router.get("/register", Util.handleErrors(accountController.buildRegister))
-router.post('/register', Util.handleErrors(accountController.registerAccount))
+router.post(
+  "/register",
+  regValidate.registationRules(),
+  regValidate.checkRegData,
+  utilities.handleErrors(accountController.registerAccount)
+)
 
 module.exports = router;
