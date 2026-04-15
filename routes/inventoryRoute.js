@@ -8,5 +8,6 @@ const Util = require("../utilities")
 router.get("/type/:classificationId", Util.handleErrors(invController.buildByClassificationId));
 
 router.get("/detail/:invId", Util.handleErrors(invController.buildByInvId));
+router.get("/manage", Util.handleErrors(invController.buildManagement));
 
 module.exports = router;
