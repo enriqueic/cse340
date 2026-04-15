@@ -67,6 +67,14 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
+section{
+  margin-left: 1rem;
+}
+
+section li{
+  list-style: none;
+}
+
 #welcome{
   padding-left: 1rem;
 }
@@ -387,6 +395,10 @@ main h1 {
 
 /* Forms */
 
+form p{
+  margin-bottom: 1rem;
+}
+
 .auth-form {
   max-width: 420px;
   margin: 1.5rem auto;
@@ -395,6 +407,42 @@ main h1 {
   border-radius: 28px;
   box-shadow: 0 28px 60px rgba(0, 0, 0, 0.22);
   color: #f7f9ff;
+}
+
+.auth-form.compact {
+  max-width: 360px;
+  margin: 1rem auto;
+  padding: 1.25rem 1.25rem;
+  border-radius: 20px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+}
+
+.auth-form.compact label {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.auth-form.compact input,
+.auth-form.compact select,
+.auth-form.compact textarea {
+  padding: 0.75rem 0.95rem;
+  border-radius: 12px;
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.auth-form.compact textarea {
+  min-height: 80px;
+}
+
+.auth-form.compact button {
+  padding: 0.85rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+.auth-form.compact .notice {
+  padding: 0.85rem 0.95rem;
+  border-radius: 14px;
 }
 
 .auth-form h1 {
