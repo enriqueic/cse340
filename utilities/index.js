@@ -79,7 +79,7 @@ Util.buildDetailView = async function(data){
         detail +=      '<li>Year: ' + vehicle.inv_year + '</li>'
         detail +=      '<li>Description: <p>' + vehicle.inv_description + '</p></li>'
         detail +=    '</ul>'
-        detail +=  '</span>'
+        detail +=  '</div>'
         detail +='</div>'
         detail +='</section>'  
   } else {
