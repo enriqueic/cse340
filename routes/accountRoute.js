@@ -4,5 +4,7 @@ const Util = require("../utilities")
 const accountController = require("../controllers/accountController")
 
 router.get("/login", Util.handleErrors(accountController.buildLogin))
+router.get("/register", Util.handleErrors(accountController.buildRegister))
+router.post('/register', Util.handleErrors(accountController.registerAccount))
 
 module.exports = router;

@@ -364,12 +364,11 @@ main h1 {
   color: var(--accent);
 }
 
-/* Login */
+/* Forms */
 
-/* Login page styles */
-.login-form {
+.auth-form {
   max-width: 420px;
-  margin: 3rem auto;
+  margin: 1.5rem auto;
   padding: 2rem 2.25rem;
   background: #183156;
   border-radius: 28px;
@@ -377,13 +376,13 @@ main h1 {
   color: #f7f9ff;
 }
 
-.login-form h1 {
+.auth-form h1 {
   margin-bottom: 1.5rem;
   text-align: center;
   font-size: clamp(2rem, 2.3vw, 2.35rem);
 }
 
-.login-form .notice {
+.auth-form .notice {
   margin-bottom: 1.25rem;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -392,14 +391,14 @@ main h1 {
   color: #f5fbff;
 }
 
-.login-form label {
+.auth-form label {
   display: block;
   margin-bottom: 0.5rem;
   color: #e5ebff;
   font-weight: 700;
 }
 
-.login-form input {
+.auth-form input {
   width: 100%;
   padding: 0.95rem 1rem;
   border-radius: 14px;
@@ -410,51 +409,78 @@ main h1 {
   margin-bottom: 1.2rem;
 }
 
-.login-form input::placeholder {
+.auth-form input::placeholder {
   color: #8a97b8;
 }
 
-.login-form input:focus {
+.auth-form input:focus {
   outline: none;
   border-color: #01b0d3;
   box-shadow: 0 0 0 4px rgba(1, 176, 211, 0.16);
 }
 
-.login-form button {
-  width: 100%;
+.auth-form button {
   padding: 0.95rem 1rem;
   border-radius: 999px;
   border: none;
   background: #ffffff;
   color: #183156;
   font-weight: 700;
-  font-size: large;
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.login-form button:hover {
+.auth-form button[type="submit"] {
+  width: 100%;
+}
+
+.auth-form button:hover {
   transform: translateY(-1px);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.14);
 }
 
-.login-form .account-footer {
+.auth-form .account-footer {
   margin-top: 1.5rem;
   text-align: center;
   color: #d9e6ff;
   font-size: 0.98rem;
 }
 
-.login-form .account-footer a {
+.auth-form .account-footer a {
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
 }
 
-.login-form .account-footer a:hover {
+.auth-form .account-footer a:hover {
   text-decoration: underline;
 }
+
+.password-field {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.password-field input {
+  flex: 1;
+}
+
+.password-field button {
+  width: auto;
+  flex: 0 0 auto;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  color: #183156;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 
 /* media queries */
 @media (min-width: 800px){
